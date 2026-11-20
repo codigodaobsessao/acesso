@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>Código da Obsessão: 30 dias pra parar de recomeçar</title>
 <meta name="description" content="30 dias de treino, missões diárias e dieta direto no celular. Pagamento único de R$ 27,99 e garantia de 7 dias.">
 <meta name="theme-color" content="#07080B">
@@ -19,8 +19,16 @@
 /* ================= 1. BASE: tokens, tipografia, componentes e layout original ================= */
 :root{--bg:#07080B;--card:#111318;--line:#1E222B;--ink:#fff;--mute:#A1A1AA;--red:#D71920;--hot:#EF2A33}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:88px;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%;touch-action:pan-y}
+/* trava zoom e arrasto lateral: a página rola só pra cima e pra baixo */
+body{max-width:100%;touch-action:pan-y}
+.shots{touch-action:pan-x pan-y}
+img,svg,video{max-width:100%}
+/* textos longos (e-mail) quebram dentro da caixa em vez de sair dela */
+p,li,h1,h2,h3,h4,summary{overflow-wrap:break-word}
+a[href^="mailto:"]{overflow-wrap:anywhere}
+.gar>p,.hg>*{min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:88px;overflow-x:hidden;overflow-x:clip}
 a{color:inherit}
 .w{max-width:1040px;margin:0 auto;padding:0 20px}
 section{padding:72px 0}
@@ -617,7 +625,7 @@ body:has(dialog.lg[open]){overflow:hidden}
    <a class="btn go" href="#oferta">Quero começar agora</a>
    <p class="note">Pix ou cartão, pela plataforma Cakto.</p>
   </div>
-  <div class="gar"><b>7</b><p><strong>Garantia de 7 dias</strong>Você pode pedir o reembolso integral em até 7 dias corridos da compra, sem precisar explicar o motivo. É só escrever para <a href="mailto:nicolas.coelho.contato@gmail.com">nicolas.coelho.contato@gmail.com</a> ou pedir pela Cakto.</p></div>
+  <div class="gar"><b>7</b><p><strong>Garantia de 7 dias</strong>Você pode pedir o reembolso integral em até 7 dias corridos da compra, sem precisar explicar o motivo. É só escrever para <a href="mailto:nicolas.coelho.contato@gmail.com">nicolas.coelho.contato@<wbr>gmail.com</a> ou pedir pela Cakto.</p></div>
  </div>
 </section>
 
@@ -634,7 +642,7 @@ body:has(dialog.lg[open]){overflow:hidden}
   <details><summary>Como acompanho meu progresso?</summary><p>Na tela Meu progresso: mapa dos 30 dias, sequência, peso, roda da vida e como estão seus treinos.</p></details>
   <details><summary>O progresso fica salvo? Posso usar em outro aparelho?</summary><p>O progresso fica salvo no aparelho que você usa, sem conta online nem sincronização. Pra trocar de celular, salve um backup no app e restaure no novo.</p></details>
   <details><summary>Como funciona a garantia?</summary><p>Você tem 7 dias corridos, contados da compra, pra pedir o reembolso integral, sem justificar. O valor volta pela mesma forma de pagamento. Depois do reembolso, o acesso é encerrado.</p></details>
-  <details><summary>Como falo com o suporte?</summary><p>Escreva para nicolas.coelho.contato@gmail.com com o nome e o e-mail usados na compra. Você também pode chamar no Instagram @o.correya.</p></details>
+  <details><summary>Como falo com o suporte?</summary><p>Escreva para nicolas.coelho.contato@<wbr>gmail.com com o nome e o e-mail usados na compra. Você também pode chamar no Instagram @o.correya.</p></details>
  </div>
 </section>
 
@@ -653,7 +661,7 @@ body:has(dialog.lg[open]){overflow:hidden}
   <p>Os resultados dependem da dedicação de cada pessoa e não são garantidos. O conteúdo é educativo e não substitui orientação de médico, nutricionista, psicólogo ou educador físico. Consulte um profissional antes de iniciar qualquer programa de exercícios ou mudança de alimentação. Produto para maiores de 18 anos; menores só com autorização e acompanhamento de um responsável.</p>
   <p>Inspirado na disciplina de atletas de alto rendimento. Produto independente, sem vínculo, patrocínio ou aprovação de Cristiano Ronaldo ou de qualquer outro atleta.</p>
   <p class="fl"><a href="#termos">Termos de Uso</a> · <a href="#privacidade">Política de Privacidade</a> · <a href="#saude">Aviso de Saúde</a> · <a href="#garantia">Garantia</a></p>
-  <p>Suporte: <a href="mailto:nicolas.coelho.contato@gmail.com">nicolas.coelho.contato@gmail.com</a> · Instagram @o.correya</p>
+  <p>Suporte: <a href="mailto:nicolas.coelho.contato@gmail.com">nicolas.coelho.contato@<wbr>gmail.com</a> · Instagram @o.correya</p>
   <p>© Código da Obsessão</p>
  </div>
 </footer>
@@ -683,7 +691,7 @@ body:has(dialog.lg[open]){overflow:hidden}
 <h3>10. Mudanças e lei aplicável</h3>
 <p>Podemos atualizar estes termos, e a versão válida é a publicada nesta página. Aplicam-se as leis brasileiras, incluindo o Código de Defesa do Consumidor.</p>
 <h3>11. Contato</h3>
-<p>Escreva para <a href="mailto:nicolas.coelho.contato@gmail.com">nicolas.coelho.contato@gmail.com</a> ou chame no Instagram @o.correya.</p></div></dialog>
+<p>Escreva para <a href="mailto:nicolas.coelho.contato@gmail.com">nicolas.coelho.contato@<wbr>gmail.com</a> ou chame no Instagram @o.correya.</p></div></dialog>
 <dialog class="lg" id="lg-privacidade" aria-labelledby="lgt-privacidade"><div class="lgh"><h2 id="lgt-privacidade">Política de Privacidade</h2><button type="button" class="lgx" aria-label="Fechar">&times;</button></div><div class="lgb"><p class="up">Última atualização: 18 de novembro de 2026.</p>
 <p>Esta política explica quais dados são tratados quando você compra e usa o Código da Obsessão: 30 dias, conforme a Lei Geral de Proteção de Dados (LGPD).</p>
 <h3>1. Quais dados tratamos</h3>
@@ -698,7 +706,7 @@ body:has(dialog.lg[open]){overflow:hidden}
 <h3>4. Por quanto tempo guardamos</h3>
 <p>Pelo tempo necessário para prestar o serviço, atender o suporte e cumprir obrigações legais. Os dados que ficam no seu aparelho você controla: ao limpar os dados do navegador, eles são apagados.</p>
 <h3>5. Seus direitos</h3>
-<p>Pela LGPD, você pode pedir confirmação de que tratamos seus dados, acesso, correção, anonimização, portabilidade, eliminação, informações sobre compartilhamento e revogação de consentimento, quando for o caso. Escreva para <a href="mailto:nicolas.coelho.contato@gmail.com">nicolas.coelho.contato@gmail.com</a>.</p>
+<p>Pela LGPD, você pode pedir confirmação de que tratamos seus dados, acesso, correção, anonimização, portabilidade, eliminação, informações sobre compartilhamento e revogação de consentimento, quando for o caso. Escreva para <a href="mailto:nicolas.coelho.contato@gmail.com">nicolas.coelho.contato@<wbr>gmail.com</a>.</p>
 <h3>6. Menores de idade</h3>
 <p>O produto é para maiores de 18 anos. Menores só com um responsável.</p>
 <h3>7. Mudanças</h3>
@@ -715,11 +723,11 @@ body:has(dialog.lg[open]){overflow:hidden}
 <p>Os resultados dependem da dedicação de cada pessoa e não são garantidos.</p>
 <h3>Maiores de 18 anos</h3>
 <p>O produto é para maiores de 18 anos. Menores só com um responsável.</p>
-<p>Dúvidas? <a href="mailto:nicolas.coelho.contato@gmail.com">nicolas.coelho.contato@gmail.com</a>.</p></div></dialog>
+<p>Dúvidas? <a href="mailto:nicolas.coelho.contato@gmail.com">nicolas.coelho.contato@<wbr>gmail.com</a>.</p></div></dialog>
 <dialog class="lg" id="lg-garantia" aria-labelledby="lgt-garantia"><div class="lgh"><h2 id="lgt-garantia">Garantia de 7 dias</h2><button type="button" class="lgx" aria-label="Fechar">&times;</button></div><div class="lgb"><p class="up">Última atualização: 18 de novembro de 2026.</p>
 <p>Você pode pedir o reembolso integral em até 7 dias corridos da compra, sem precisar explicar o motivo.</p>
 <h3>Como pedir</h3>
-<p>Escreva para <a href="mailto:nicolas.coelho.contato@gmail.com">nicolas.coelho.contato@gmail.com</a> com o nome e o e-mail usados na compra, ou peça pela plataforma Cakto, dentro dos 7 dias.</p>
+<p>Escreva para <a href="mailto:nicolas.coelho.contato@gmail.com">nicolas.coelho.contato@<wbr>gmail.com</a> com o nome e o e-mail usados na compra, ou peça pela plataforma Cakto, dentro dos 7 dias.</p>
 <h3>Como você recebe</h3>
 <p>O valor volta integralmente pela mesma forma de pagamento usada na compra. O prazo para aparecer na sua conta ou fatura pode variar conforme o banco, o cartão ou o Pix.</p>
 <h3>O que acontece com o acesso</h3>
